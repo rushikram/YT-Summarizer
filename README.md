@@ -18,53 +18,42 @@ Before you begin, ensure you have:
 - A Google API key with access to Gemini AI
 - A YouTube video URL to summarize
 
-## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/youtube-transcript-summarizer.git
-   cd youtube-transcript-summarizer
-Create and activate a virtual environment (recommended):
+🛠️ Tech Stack
+Category	Technology
+Frontend	Streamlit (Python web framework)
+AI Model	Gemini 1.5 Flash (Google's generative AI)
+APIs	YouTube Transcript API
+Env Mgmt	python-dotenv (for API key security)
+Deployment	Compatible with Streamlit Cloud, AWS, GCP, etc.
 
-bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required packages:
+## Limitations
 
-bash
-pip install -r requirements.txt
-Create a .env file in the project root and add your Google API key:
+Transcript Availability
 
-env
-GOOGLE_API_KEY=your_api_key_here
-Usage
-Run the Streamlit application:
+Only works with videos that have enabled captions (auto-generated or manual).
 
-bash
-streamlit run app.py
-Open the application in your browser (usually http://localhost:8501)
+Fails on videos with disabled transcripts or region-locked content.
 
-Enter a YouTube video URL in the input field
+AI Constraints
 
-Click "Get Detailed Notes" to generate the summary
+Gemini 1.5 Flash has a ~300-word output limit (hardcoded in the prompt).
 
-View the video thumbnail and generated summary
+May struggle with highly technical content or non-English transcripts.
 
-##Technologies Used
+Performance
 
-Streamlit - Web application framework
+Longer videos (>30 mins) may hit API timeout limits.
 
-Google Gemini AI - AI model for text generation
+No caching: Repeated requests for the same video trigger new API calls.
 
-YouTube Transcript API - For fetching video transcripts
+Security
 
-python-dotenv - For environment variable management
+Requires exposing Google API keys in client-side code (mitigated via .env).
 
-##Limitations
+YouTube Specifics
 
-Works only with videos that have available transcripts
+Only supports standard YouTube URLs (e.g., ?v=ID). Shorts/embedded links may fail.
 
-May not handle very long videos optimally due to token limits
 
-Requires a valid Google API key
 
