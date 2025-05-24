@@ -19,41 +19,21 @@ Before you begin, ensure you have:
 - A YouTube video URL to summarize
 
 
-🛠️ Tech Stack
-Category	Technology
-Frontend	Streamlit (Python web framework)
-AI Model	Gemini 1.5 Flash (Google's generative AI)
-APIs	YouTube Transcript API
-Env Mgmt	python-dotenv (for API key security)
-Deployment	Compatible with Streamlit Cloud, AWS, GCP, etc.
 
-## Limitations
 
-Transcript Availability
+## Results:
 
-Only works with videos that have enabled captions (auto-generated or manual).
+HOME PAGE---
 
-Fails on videos with disabled transcripts or region-locked content.
+![Screenshot 2025-05-24 124431](https://github.com/user-attachments/assets/dbb9a7f4-4a80-4cd4-93b3-57135241bb81)
 
-AI Constraints
+AFTER INTERACTION---
 
-Gemini 1.5 Flash has a ~300-word output limit (hardcoded in the prompt).
+ ![Screenshot 2025-05-24 124830](https://github.com/user-attachments/assets/0a80849d-5477-41e6-a972-bf00e5c49243)
+ ![Screenshot 2025-05-24 124904](https://github.com/user-attachments/assets/d0b3a232-da18-46ca-944a-0c8cecaf4601)
 
-May struggle with highly technical content or non-English transcripts.
+ 
 
-Performance
-
-Longer videos (>30 mins) may hit API timeout limits.
-
-No caching: Repeated requests for the same video trigger new API calls.
-
-Security
-
-Requires exposing Google API keys in client-side code (mitigated via .env).
-
-YouTube Specifics
-
-Only supports standard YouTube URLs (e.g., ?v=ID). Shorts/embedded links may fail.
 
 
 
