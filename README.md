@@ -17,35 +17,6 @@ A valid Google API key for Gemini (via Google AI Studio)
 
 YouTube video with a public transcript
 
-📦 Installation
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/youtube-transcript-summarizer.git
-cd youtube-transcript-summarizer
-Create a virtual environment (optional but recommended):
-
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install dependencies:
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Set up your environment variables:
-
-Create a .env file in the root directory and add your Google API key:
-
-ini
-Copy
-Edit
-GOOGLE_API_KEY=your_google_api_key_here
 
 RESULTS:
 Home Page:
