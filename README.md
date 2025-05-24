@@ -1,50 +1,47 @@
-        st.write(summary) create readme file for github
-YouTube Transcript Summarizer - README
-Overview
-This project is a Streamlit web application that summarizes YouTube videos by extracting their transcripts and using Google's Gemini AI to generate concise summaries. Users can input a YouTube video URL and receive key points from the video in a readable format.
+# YouTube Transcript Summarizer
 
-Features
-Extracts transcripts from YouTube videos using YouTubeTranscriptApi
+A Streamlit web application that generates detailed summaries from YouTube video transcripts using Google's Gemini AI.
 
-Uses Google's Gemini 1.5 Flash AI model for summarization
+## Features
 
-Displays video thumbnail for visual reference
+- Extracts transcripts from YouTube videos
+- Generates concise summaries (under 300 words) using Gemini 1.5 Flash AI
+- Displays video thumbnail for visual reference
+- Simple and intuitive interface
 
-Generates concise summaries (under 300 words) with key points
+## Prerequisites
 
-Simple, user-friendly interface built with Streamlit
+Before you begin, ensure you have the following:
 
-Prerequisites
-Before running the application, you'll need:
+- Python 3.7 or higher installed
+- A Google API key with access to Gemini AI
+- YouTube video links you want to summarize
 
-Python 3.7 or higher
+## Installation
 
-A Google API key with access to Gemini AI
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/youtube-transcript-summarizer.git
+   cd youtube-transcript-summarizer
 
-YouTube video links (public videos with available transcripts)
+2Create and activate a virtual environment (recommended):
 
-Installation
-Clone the repository:
-
-bash
-git clone https://github.com/yourusername/youtube-summarizer.git
-cd youtube-summarizer
-Create and activate a virtual environment (recommended):
-
-bash
+    ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required packages:
+Install the required dependencies:
 
-bash
+```bash
 pip install -r requirements.txt
+
 Create a .env file in the project root and add your Google API key:
 
+env
 GOOGLE_API_KEY=your_api_key_here
 Usage
 Run the Streamlit application:
 
-bash
+```bash
 streamlit run app.py
 The application will open in your default web browser.
 
@@ -52,16 +49,7 @@ Enter a YouTube video URL in the input field.
 
 Click "Get Detailed Notes" to generate the summary.
 
-View the video thumbnail and AI-generated summary on the page.
-
-Configuration
-The application can be configured by modifying:
-
-.env file for environment variables
-
-The prompt variable in app.py to change the summarization behavior
-
-Streamlit configuration for UI changes
+View the generated summary below the video thumbnail.
 
 Dependencies
 streamlit
@@ -72,24 +60,19 @@ google-generativeai
 
 youtube-transcript-api
 
-All dependencies are listed in requirements.txt.
+Configuration
+The application can be configured by modifying the following:
+
+.env file: Add your Google API key
+
+app.py: Modify the prompt text or summary length as needed
 
 Limitations
-Only works with videos that have available transcripts
+Only works with videos that have transcripts available
 
 May not work with age-restricted or private videos
 
-Summarization quality depends on the Gemini AI model
+Summary quality depends on the original video content and transcript accuracy
 
 Contributing
-Contributions are welcome! Please open an issue or pull request for any improvements.
-
-
-RESULTS:
-Home Page:
-![Screenshot 2025-05-24 124431](https://github.com/user-attachments/assets/76148d10-f6d0-4721-a6d4-be3d5fd08ed6)
-After Interaction :
-![Screenshot 2025-05-24 124830](https://github.com/user-attachments/assets/f4af3550-ef1f-41f3-a2fa-7ef87850e941)
-![Screenshot 2025-05-24 124904](https://github.com/user-attachments/assets/e9fab184-8b25-4129-ae37-9fb508a90982)
-
-
+Contributions are welcome! Please open an issue or submit a pull request for any improvements.
